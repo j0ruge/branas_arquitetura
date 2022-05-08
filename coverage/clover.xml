@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1652037719902" clover="3.2.0">
+  <project timestamp="1652037719902" name="All files">
+    <metrics statements="23" coveredstatements="23" conditionals="22" coveredconditionals="22" methods="3" coveredmethods="3" elements="48" coveredelements="48" complexity="0" loc="23" ncloc="23" packages="1" files="2" classes="2"/>
+    <file name="Circle.js" path="D:\Downloads\source\repos\branas_arquitetura\dist\src\Circle.js">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+    </file>
+    <file name="calculateRide.js" path="D:\Downloads\source\repos\branas_arquitetura\dist\src\calculateRide.js">
+      <metrics statements="19" coveredstatements="19" conditionals="22" coveredconditionals="22" methods="1" coveredmethods="1"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="7" count="7" type="stmt"/>
+      <line num="8" count="7" type="stmt"/>
+      <line num="9" count="7" type="cond" truecount="6" falsecount="0"/>
+      <line num="10" count="6" type="cond" truecount="6" falsecount="0"/>
+      <line num="12" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="14" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="24" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="42" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="43" count="1" type="stmt"/>
+      <line num="46" count="4" type="stmt"/>
+      <line num="49" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
