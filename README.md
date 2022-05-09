@@ -1,3 +1,7 @@
+# branas_arquitetura
+
+## Aula 1, Code Smell e Refactoring
+
 Dado um código a ser estudado, criamos em primeira instância um teste, com intuito de estressa-lo. 
 
 
@@ -17,9 +21,9 @@ Dado um código a ser estudado, criamos em primeira instância um teste, com int
 
  Entretanto 100% de cobertura, não garante 100% de acertividade.
 
- #Code Smells
+ ### Code Smells
 
- 1- Nomes Estranhos
+ #### 1- Nomes Estranhos
 
  dist, ds, calc, movArray, mov, result
 
@@ -31,5 +35,29 @@ renomear classes
 renomear arquivos
 renomear pastas
 
-Continuar Aula 1, Code Smell e Refactoring, 33:50
-# branas_arquitetura
+#### 2 - Números mágicos
+
+3.90, 2.90, 2.1, 0, 10, -1, -2, 22, 6
+
+Técnina básica, EXTRAIR
+
+extrair constantes
+extrair variáveis explicativas
+
+
+#### 3 - Comentários
+
+renomear
+extrair método
+extrair variável explicativa
+
+#### 4 - código morto
+apagar
+
+#### 5 - linhas em branco
+
+remover linhas em branco
+
+#### 6 - Condições confusas
+
+47:53
