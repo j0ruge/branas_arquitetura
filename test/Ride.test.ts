@@ -1,9 +1,17 @@
+import NormalFareCalculator from '../src/NormalFareCalculator';
+import OvernightFareCalculator from '../src/OvernightFareCalculator';
+import OvernightSundayFareCalculator from '../src/OvernightSundayFareCalculator';
 import Ride from '../src/Ride';
+import SundayFareCalculator from '../src/SundayFareCalculator';
 
 let ride: Ride;
 
 beforeEach(function () {
-  ride = new Ride();
+  const normalFareCalculator = new NormalFareCalculator();
+  const sundayFareCalculator = new SundayFareCalculator(normalFareCalculator);
+  const overnightSundayFareCalculator = new OvernightSundayFareCalculator(sundayFareCalculator);
+  const overnightFareCalculator = new OvernightFareCalculator(overnightSundayFareCalculator);
+  ride = new Ride(overnightFareCalculator);
 })
 
 test('Deve calcular o valor da corrida em horário normal', function () {

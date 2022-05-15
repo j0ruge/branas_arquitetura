@@ -1,11 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class NormalFareCalculator {
-    constructor() {
+    constructor(next) {
+        this.next = next;
         this.FARE = 2.10;
     }
     calculate(segment) {
-        return segment.distance * this.FARE;
+        var _a;
+        if (!segment.isOvernight() && !segment.isSunday()) {
+            return segment.distance * this.FARE;
+        }
+        if (!this.next)
+            throw new Error('');
+        return (_a = this.next) === null || _a === void 0 ? void 0 : _a.calculate(segment);
     }
 }
 exports.default = NormalFareCalculator;

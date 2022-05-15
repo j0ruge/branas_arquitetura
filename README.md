@@ -114,3 +114,21 @@ O construtor serve para mediar a contrução do objeto e não permitir que ele s
 ## PARÂMETROS
 
 Quantos parâmetos são o ideal? R: Quanto menos parâmetros melhor
+
+
+## FACTORY
+
+
+## CHAIN OF RESPONSABILITY
+
+Lembra um pipeline.
+
+# SOLID
+
+## OCP
+
+Estou aberto para extenção, fechado para modifiação.
+
+## DIP (SOLID)
+Externalizando a dependêcia e fazendo com que um módulo não dependa do outro, assim tendo uma testabilidade maior. 
+   

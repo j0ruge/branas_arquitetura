@@ -1,11 +1,17 @@
-import FareCalculatorFactory from './FareCalculatorFactory';
+import FareCalculator from './FareCalculator';
 import Segment from './Segment'
 
 export default class Ride {
   segments: Segment[];
   MINIMUM_FARE = 10;  
 
-  constructor(){
+  constructor(readonly fareCalculator: FareCalculator){ 
+    /**
+     * DIP (SOLID)
+     * 
+     * Externalizando a dependêcia e fazendo com que um módulo não dependa do outro. 
+     * 
+     * */
     this.segments = [];
   }
 
@@ -15,9 +21,8 @@ export default class Ride {
 
   finish() {
     let fare = 0;
-    for (const segment of this.segments) { 
-			const fareCalculator = FareCalculatorFactory.create(segment);
-      fare += fareCalculator.calculate(segment);
+    for (const segment of this.segments) { 			
+      fare += this.fareCalculator.calculate(segment);
     }
     return (fare > this.MINIMUM_FARE) ? fare : this.MINIMUM_FARE;
   }
