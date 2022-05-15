@@ -85,10 +85,32 @@ Dentro dos ```thorw new Error()```, informar sobre o que se trata o erro, altera
 #### 10 - Quebrando o OCP (Open/Close Principle)
 
 
-#### 11 - Inveja de dados
-
-mover métodos 
-ocultar delegações
+#### 11 - Inveja de dados (1:06 h)
 
 
-47:53
+* Mover métodos 
+
+Existem muitas referencias, neste caso de exemplo a segments, então vamos moves estes métodos para dentro da Classe Segments tirando de Rides. 
+
+* Ocultar delegações
+
+
+
+#### 12 - Longa lista de parâmetros (1:10 h)
+
+Quanto menos parâmetros melhor
+
+* Intruduzir abstrações
+* Intruduzer Objetos parâmetro
+
+
+
+#Definições Interessantes
+
+## CONSTRUTORES
+
+O construtor serve para mediar a contrução do objeto e não permitir que ele seja inválido. 
+
+## PARÂMETROS
+
+Quantos parâmetos são o ideal? R: Quanto menos parâmetros melhor
