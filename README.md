@@ -60,4 +60,25 @@ remover linhas em branco
 
 #### 6 - Condições confusas
 
+extrair condição
+remover condições aninhadas por cláusula guarda
+consolidar condições (50:03 min)
+intruduzir ternário.
+
+#### 7 - falta de tratamento de exceptions 
+
+
+* Substituir códigode erro por exception (51:48 m)
+
+Remover os ```return -1``` e ```return -2``` do código por ```thorw new Error()```
+
+* Incorporar informações de tratamento. 
+
+Dentro dos ```thorw new Error()```, informar sobre o que se trata o erro, alterando para ```throw new Error('Invalid Distance')``` e ```throw new Error('Invalid Date')```.
+
+#### 8 - Método longo
+
+
+#### 9 - "Classe grande"
+
 47:53
