@@ -1,7 +1,7 @@
 "use strict";
-// @ts-nocheck
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.calculateRide = void 0;
+// @ts-nocheck
 const OVERNIGHT_FARE = 3.90;
 const SUNDAY_FARE = 2.90;
 const OVERNIGHT_SUNDAY_FARE = 5;

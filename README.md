@@ -81,4 +81,14 @@ Dentro dos ```thorw new Error()```, informar sobre o que se trata o erro, altera
 
 #### 9 - "Classe grande"
 
+
+#### 10 - Quebrando o OCP (Open/Close Principle)
+
+
+#### 11 - Inveja de dados
+
+mover métodos 
+ocultar delegações
+
+
 47:53

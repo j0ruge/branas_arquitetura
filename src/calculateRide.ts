@@ -1,5 +1,4 @@
 // @ts-nocheck
-
 const OVERNIGHT_FARE = 3.90;
 const SUNDAY_FARE = 2.90;
 const OVERNIGHT_SUNDAY_FARE = 5;
