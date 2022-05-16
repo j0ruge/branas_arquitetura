@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const calculateRide_1 = require("../src/calculateRide");
+const calculateRide_1 = require("../../src/exemplo01_ride/calculateRide");
 test('Deve calcular o valor da corrida em horário normal', function () {
     const fare = (0, calculateRide_1.calculateRide)([{ distance: 10, date: new Date('2021-03-01T10:00:00') }]);
     expect(fare).toBe(21);

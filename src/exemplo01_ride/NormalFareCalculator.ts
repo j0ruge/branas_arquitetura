@@ -5,8 +5,6 @@ import Segment from './Segment';
  * Utilizando o padrão CHAIN OF RESPONSABILITY * 
  * 
  */
-
-
 export default class NormalFareCalculator implements FareCalculator {
   FARE = 2.10;
 

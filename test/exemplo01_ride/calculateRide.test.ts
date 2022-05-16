@@ -1,4 +1,4 @@
-import { calculateRide } from "../src/calculateRide";
+import { calculateRide } from "../../src/exemplo01_ride/calculateRide";
 
 test('Deve calcular o valor da corrida em horário normal', function () {
   const fare = calculateRide([{ distance: 10, date: new Date('2021-03-01T10:00:00')}])

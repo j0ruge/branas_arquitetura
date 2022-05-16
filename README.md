@@ -131,4 +131,17 @@ Estou aberto para extenção, fechado para modifiação.
 
 ## DIP (SOLID)
 Externalizando a dependêcia e fazendo com que um módulo não dependa do outro, assim tendo uma testabilidade maior. 
-   
+
+
+## Aula 2, Code Smell e Refactoring
+
+1 - O primeiro passo para sair do lugar e criar o teste.
+2 - nomes estranhos
+Renomear variável
+
+
+
+true para thuthy, false para falsy
+false, '', undefined, null, 0, NaN => falsy, todo o resto é thuthy
+
+12:59 m do segundo video de refatoração

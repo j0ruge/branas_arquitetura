@@ -3,10 +3,22 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Ride_1 = __importDefault(require("../src/Ride"));
+const NormalFareCalculator_1 = __importDefault(require("../../src/exemplo01_ride/NormalFareCalculator"));
+const OvernightFareCalculator_1 = __importDefault(require("../../src/exemplo01_ride/OvernightFareCalculator"));
+const OvernightSundayFareCalculator_1 = __importDefault(require("../../src/exemplo01_ride/OvernightSundayFareCalculator"));
+const Ride_1 = __importDefault(require("../../src/exemplo01_ride/Ride"));
+const SundayFareCalculator_1 = __importDefault(require("../../src/exemplo01_ride/SundayFareCalculator"));
 let ride;
+/**
+ * Utilizando o padrão CHAIN OF RESPONSABILITY *
+ *
+ */
 beforeEach(function () {
-    ride = new Ride_1.default();
+    const normalFareCalculator = new NormalFareCalculator_1.default();
+    const sundayFareCalculator = new SundayFareCalculator_1.default(normalFareCalculator);
+    const overnightSundayFareCalculator = new OvernightSundayFareCalculator_1.default(sundayFareCalculator);
+    const overnightFareCalculator = new OvernightFareCalculator_1.default(overnightSundayFareCalculator);
+    ride = new Ride_1.default(overnightFareCalculator);
 });
 test('Deve calcular o valor da corrida em horário normal', function () {
     ride.addSegment(10, new Date('2021-03-01T10:00:00'));

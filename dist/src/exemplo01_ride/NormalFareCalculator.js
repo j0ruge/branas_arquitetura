@@ -1,5 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+/**
+* Utilizando o padrão CHAIN OF RESPONSABILITY *
+*
+*/
 class NormalFareCalculator {
     constructor(next) {
         this.next = next;

@@ -1,10 +1,15 @@
-import NormalFareCalculator from '../src/NormalFareCalculator';
-import OvernightFareCalculator from '../src/OvernightFareCalculator';
-import OvernightSundayFareCalculator from '../src/OvernightSundayFareCalculator';
-import Ride from '../src/Ride';
-import SundayFareCalculator from '../src/SundayFareCalculator';
+import NormalFareCalculator from '../../src/exemplo01_ride/NormalFareCalculator';
+import OvernightFareCalculator from '../../src/exemplo01_ride/OvernightFareCalculator';
+import OvernightSundayFareCalculator from '../../src/exemplo01_ride/OvernightSundayFareCalculator';
+import Ride from '../../src/exemplo01_ride/Ride';
+import SundayFareCalculator from '../../src/exemplo01_ride/SundayFareCalculator';
 
 let ride: Ride;
+
+/**
+ * Utilizando o padrão CHAIN OF RESPONSABILITY * 
+ * 
+ */
 
 beforeEach(function () {
   const normalFareCalculator = new NormalFareCalculator();
