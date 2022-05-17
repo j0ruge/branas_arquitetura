@@ -135,13 +135,18 @@ Externalizando a dependêcia e fazendo com que um módulo não dependa do outro,
 
 ## Aula 2, Code Smell e Refactoring
 
-1 - O primeiro passo para sair do lugar e criar o teste.
-2 - nomes estranhos
+0 - O primeiro passo para sair do lugar e criar o teste.
+1 - nomes estranhos
 Renomear variável
-
-
+2 - linhas em branco. 
+apagar linhas em branco.
+3- comentários
+apagar comentários
+4- condições aninhadas
+remover condição aninhada por cláusula guarda, 
+ cláusula guarda,  Se dá invertendo as condições e abortar o fluxo de execução o mais cedo possível, se for null SAI. 
 
 true para thuthy, false para falsy
 false, '', undefined, null, 0, NaN => falsy, todo o resto é thuthy
 
-12:59 m do segundo video de refatoração
+26:57 m do segundo video de refatoração
