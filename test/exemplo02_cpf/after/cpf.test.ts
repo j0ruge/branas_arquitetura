@@ -1,7 +1,7 @@
-import { validate } from "../../../src/exemplo02_cpf/after/cpf"
+import { validateCpf } from "../../../src/exemplo02_cpf/after/cpf"
 
 test('Deve validar um cpf válido', function () {
-  const isValid = validate('037.486.207-99');
+  const isValid = validateCpf('037.486.207-99');
   expect(isValid).toBeTruthy();
 });
 
@@ -12,21 +12,21 @@ const wrongSameDigitCpf = [
 ]
 
 test.each(wrongSameDigitCpf)('Deve validar um cpf inválido com todos os números iguais', function (cpf) {
-  const isValid = validate(cpf);
+  const isValid = validateCpf(cpf);
   expect(isValid).toBeFalsy();
 })
 
 test('Deve validar um cpf inválido que seja', function () {
-  const isValid = validate(null);
+  const isValid = validateCpf(null);
   expect(isValid).toBeFalsy();
 })
 
 test('Deve validar um cpf válido sem pontos e traços', function () {
-  const isValid = validate('037.486.207-99');
+  const isValid = validateCpf('037.486.207-99');
   expect(isValid).toBeTruthy();
 });
 
 test('Deve validar um cpf válido com alguns pontos', function () {
-  const isValid = validate('037.486.207-99');
+  const isValid = validateCpf('037.486.207-99');
   expect(isValid).toBeTruthy();
 });

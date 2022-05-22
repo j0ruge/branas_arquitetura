@@ -1,7 +1,7 @@
 const FIRST_DIGIT_FACTOR = 10;
 const SECOND_DIGIT_FACTOR = 11;
 
-export function validate(rawCpf: string | null | undefined) {
+export function validateCpf(rawCpf: string | null | undefined) {
     if (!rawCpf) return false;
     const cpf = cleanCpf(rawCpf);
     if (isInvalidLenght(cpf)) return false;
@@ -27,10 +27,10 @@ function isIdenticalDigits(cpf: string) {
 }
 
 function calculateCheckDigit (cpf: string, factor: number) {
-    let total = 0;
-    for (const digit of cpf) {
+    const total = [...cpf].reduce((total, digit) => {
         if (factor > 1 ) total += parseInt(digit) * factor--
-    }
+        return total;
+    },0);    
     const rest = total%11;
     return (rest < 2) ? 0 : 11 - rest;
 }

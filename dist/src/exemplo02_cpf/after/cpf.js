@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.validate = void 0;
+exports.validateCpf = void 0;
 const FIRST_DIGIT_FACTOR = 10;
 const SECOND_DIGIT_FACTOR = 11;
-function validate(rawCpf) {
+function validateCpf(rawCpf) {
     if (!rawCpf)
         return false;
     const cpf = cleanCpf(rawCpf);
-    if (isValidLenght(cpf))
+    if (isInvalidLenght(cpf))
         return false;
     if (isIdenticalDigits(cpf))
         return false;
@@ -17,23 +17,23 @@ function validate(rawCpf) {
     const calculatedChackDigit = `${calculatedCheckDigit1}${calculatedCheckDigit2}`;
     return checkDigit === calculatedChackDigit;
 }
-exports.validate = validate;
+exports.validateCpf = validateCpf;
 function cleanCpf(cpf) {
     return cpf.replace(/\D/g, '');
 }
-function isValidLenght(cpf) {
+function isInvalidLenght(cpf) {
     return cpf.length !== 11;
 }
 function isIdenticalDigits(cpf) {
     const [firstDigit] = cpf;
-    return cpf.split("").every(c => c === firstDigit);
+    return [...cpf].every(digit => digit === firstDigit);
 }
 function calculateCheckDigit(cpf, factor) {
-    let total = 0;
-    for (const digit of cpf) {
+    const total = [...cpf].reduce((total, digit) => {
         if (factor > 1)
             total += parseInt(digit) * factor--;
-    }
+        return total;
+    }, 0);
     const rest = total % 11;
     return (rest < 2) ? 0 : 11 - rest;
 }
