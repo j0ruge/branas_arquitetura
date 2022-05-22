@@ -135,6 +135,8 @@ Externalizando a dependêcia e fazendo com que um módulo não dependa do outro,
 
 ## Aula 2, Code Smell e Refactoring
 
+Regra do cálculo do CPF baseada em https://www.macoratti.net/alg_cpf.htm#:~:text=O%20algoritmo%20de%20valida%C3%A7%C3%A3o%20do,%3A%20111.444.777%2D05.
+
 0 - O primeiro passo para sair do lugar e criar o teste.
 1 - nomes estranhos
 Renomear variável
