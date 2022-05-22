@@ -142,11 +142,35 @@ Renomear variável
 apagar linhas em branco.
 3- comentários
 apagar comentários
-4- condições aninhadas
-remover condição aninhada por cláusula guarda, 
+4- condições aninhadas ou confusas
+* remover condição aninhada por cláusula guarda, 
  cláusula guarda,  Se dá invertendo as condições e abortar o fluxo de execução o mais cedo possível, se for null SAI. 
+* Intruduzir ternário. 
 
 true para thuthy, false para falsy
 false, '', undefined, null, 0, NaN => falsy, todo o resto é thuthy
+
+
+Já podemos afirmar que o código está com um controle melhor, pelo simples fato dele estar mais perto da margem, menos aninhamentos. 
+
+Quando vamos implementar um código que temos medo, colocamos ele em volta de um try, catch
+
+5- uso indequado de controle de exceptions (ex.: try, catch )
+
+* remover o try/catch inadequado. 
+
+6- Identação errada
+
+* Corrigir identação.
+
+Declarar separado de inicializar é um code smell
+
+
+7- Método grande (e fazendo muita coisa, com muita responsabilidade)
+* Extrair método.
+
+8- Algoritmo complexo.
+Quando a forma utilizada para resolução do problema, não ter sido muito feliz.
+* Reescrever algotitmo
 
 26:57 m do segundo video de refatoração

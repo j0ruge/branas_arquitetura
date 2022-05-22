@@ -1,37 +1,41 @@
-// @ts-nocheck
-export function validate(cpf) {
-    if (cpf === null) return false
-    if (cpf === undefined) return false
-    cpf = cpf.replace(/\D/g, '');
-    if (cpf.length !== 11) return false;
-    if (cpf.split("").every(c => c === cpf[0])) return false
-    try {
-        let d1, d2;
-        let dg1, dg2, rest;
-        let digito;
-        let nDigResult;
-        d1 = d2 = 0;
-        dg1 = dg2 = rest = 0;
-        for (let nCount = 1; nCount < cpf.length - 1; nCount++) {
-            digito = parseInt(cpf.substring(nCount - 1, nCount));
-            d1 = d1 + (11 - nCount) * digito;
-            d2 = d2 + (12 - nCount) * digito;
-        };
-        rest = (d1 % 11);
-        dg1 = (rest < 2) ? dg1 = 0 : 11 - rest;
-        d2 += 2 * dg1;
-        rest = (d2 % 11);
-        if (rest < 2)
-            dg2 = 0;
-        else
-            dg2 = 11 - rest;
-        let nDigVerific = cpf.substring(cpf.length - 2, cpf.length);
-        nDigResult = "" + dg1 + "" + dg2;
-        return nDigVerific == nDigResult;
-    } catch (e) {
-        console.error("Erro !" + e);
-        return false;
-    }
+const FIRST_DIGIT_FACTOR = 10;
+const SECOND_DIGIT_FACTOR = 11;
 
+export function validate(rawCpf: string | null | undefined) {
+    if (!rawCpf) return false;
+    const cpf = cleanCpf(rawCpf);
+    if (isInvalidLenght(cpf)) return false;
+    if (isIdenticalDigits(cpf)) return false;  
+    let calculatedCheckDigit1 = calculateCheckDigit(cpf, FIRST_DIGIT_FACTOR);
+    let calculatedCheckDigit2 = calculateCheckDigit(cpf, SECOND_DIGIT_FACTOR);
+    let checkDigit = extractCheckDigits(cpf);
+    const calculatedChackDigit = `${calculatedCheckDigit1}${calculatedCheckDigit2}`;
+    return checkDigit === calculatedChackDigit; 
 }
 
+function cleanCpf (cpf: string) {
+    return cpf.replace(/\D/g, '');
+}
+
+function isInvalidLenght(cpf: string ) {
+    return cpf.length !== 11;
+}
+
+function isIdenticalDigits(cpf: string) {
+    const [firstDigit] = cpf
+    return [...cpf].every(digit => digit === firstDigit);
+}
+
+function calculateCheckDigit (cpf: string, factor: number) {
+    let total = 0;
+    for (const digit of cpf) {
+        if (factor > 1 ) total += parseInt(digit) * factor--
+    }
+    const rest = total%11;
+    return (rest < 2) ? 0 : 11 - rest;
+}
+
+function extractCheckDigits(cpf: string) {
+    const LAST_TWO_DIGITS = -2;
+    return cpf.slice(LAST_TWO_DIGITS);
+}
