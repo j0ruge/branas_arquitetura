@@ -172,5 +172,3 @@ Declarar separado de inicializar é um code smell
 8- Algoritmo complexo.
 Quando a forma utilizada para resolução do problema, não ter sido muito feliz.
 * Reescrever algotitmo
-
-26:57 m do segundo video de refatoração
