@@ -1,0 +1,24 @@
+{
+  "name": "cccat6_test_patterns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "main": "tsc && node ./dist/main",
+    "test": "tsc && jest dist/test",
+    "coverage": "tsc && jest ./dist/test --coverage",
+    "clear_test": "tsc && jest --clearCache"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^27.5.1",
+    "jest": "^28.1.0",
+    "pg-promise": "^10.11.1",
+    "sinon": "^14.0.0",
+    "ts-jest": "^28.0.2",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.6.4"
+  }
+}
